@@ -1,3 +1,31 @@
+/**/
+$(function() {
+	/*Event handler for submitting radio button*/
+	$('form').on('submit', function(event) {
+		event.preventDefault();
+		var data = $(this).serializeArray();
+		numberOfTeams = parseInt(data[0].value);
+		});
+
+	$('.generate').on('click', function(event) {
+
+		var $li = ('<li>');
+		var $ul = ('<ul>');
+		for (var i = 0; i < list.length ; i++)
+		$('ul').append(list[i])
+		});
+});
+
+/*Create variable to store number of teams from form*/
+var numberOfTeams = 0;
+var shuffledClassList = shuffle(peerArray);
+//shuffledClassList.slice(0, sizeSelection);
+var list = shuffledClassList.slice(0, 22 / numberOfTeams);
+
+
+
+
+
 /*create an array of peers--initially empty*/
 var peerArray = [];
 /*create a count for the total number of peers in a class */
@@ -65,9 +93,9 @@ pushToArray('James Kirwin');
 pushToArray('Manuel Zumarraga');
 pushToArray('Sam Richard');
 
-var shuffledClassList = shuffle(peerArray);
 
 
-console.log(shuffledClassList.slice(0,7));
-console.log(shuffledClassList.slice(0,7));
+
+
+
 
