@@ -5,6 +5,7 @@ $(function() {
 		event.preventDefault();
 		var data = $(this).serializeArray();
 		numberOfTeams = parseInt(data[0].value);
+		console.log(numberOfTeams);
 		});
 
 	$('.generate').on('click', function(event) {
@@ -12,7 +13,7 @@ $(function() {
 		var $li = ('<li>');
 		var $ul = ('<ul>');
 		for (var i = 0; i < list.length ; i++)
-		$('ul').append(list[i])
+		$('ul').append(list[i]);
 		});
 });
 
@@ -21,10 +22,6 @@ var numberOfTeams = 0;
 var shuffledClassList = shuffle(peerArray);
 //shuffledClassList.slice(0, sizeSelection);
 var list = shuffledClassList.slice(0, 22 / numberOfTeams);
-
-
-
-
 
 /*create an array of peers--initially empty*/
 var peerArray = [];
